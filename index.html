@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">홈</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>SEARCH<br>INNOVATION</h1>
+                    <p class="subtitle">미래를 선도하는 검색 기술의 혁신</p>
+                    <div class="description">
+                        <p class="highlight">혁신적인 검색 기술로 새로운 가치를 창출합니다</p>
+                        <div class="search-container">
+                            <div class="search-box">
+                                <div class="search-input-wrapper">
+                                    <input type="text" placeholder="검색어를 입력하세요 (키워드, URL, 주제어 등)">
+                                    <div class="search-suggestions"></div>
+                                </div>
+                                <button type="submit" class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="search-tags">
+                                <span class="tag"><i class="fas fa-chart-line"></i> 실시간 트렌드</span>
+                                <span class="tag"><i class="fas fa-robot"></i> AI 분석</span>
+                                <span class="tag"><i class="fas fa-database"></i> 빅데이터</span>
+                                <span class="tag"><i class="fas fa-spider"></i> 웹크롤링</span>
+                            </div>
+
+                            <div class="search-features">
+                                <div class="feature-box">
+                                    <i class="fas fa-magic"></i>
+                                    <span>AI 키워드 추천</span>
+                                </div>
+                                <div class="feature-box">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>데이터 분석</span>
+                                </div>
+                                <div class="feature-box">
+                                    <i class="fas fa-bullseye"></i>
+                                    <span>SEO 최적화</span>
+                                </div>
+                                <div class="feature-box">
+                                    <i class="fas fa-brain"></i>
+                                    <span>의도 분석</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>SCROLL</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 검색 결과 섹션 추가 -->
+    <section id="search-results" class="search-results-section" style="display: none;">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>AI 기반 검색 결과 분석</h2>
+                <button class="close-results">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="results-grid">
+                <!-- AI 키워드 분석 카드 -->
+                <div class="result-card analytics">
+                    <h3>AI 키워드 분석
+                        <span class="help-icon" data-tooltip="인공지능이 분석한 키워드의 특성과 가치를 보여줍니다">
+                            <i class="fas fa-question-circle"></i>
+                        </span>
+                    </h3>
+                    <div class="keyword-info-list">
+                        <div class="info-item">
+                            <span class="info-label">키워드 분류</span>
+                            <span class="info-value ai-category">
+                                <i class="fas fa-robot"></i>
+                                인공지능/머신러닝
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">AI 신뢰도 점수</span>
+                            <span class="info-value confidence-score">
+                                <div class="score-meter">
+                                    <div class="score-fill" style="width: 92%"></div>
+                                    <span>92%</span>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">감성 분석</span>
+                            <div class="sentiment-analysis">
+                                <div class="sentiment-item positive">
+                                    <span>긍정</span>
+                                    <strong>75%</strong>
+                                </div>
+                                <div class="sentiment-item neutral">
+                                    <span>중립</span>
+                                    <strong>20%</strong>
+                                </div>
+                                <div class="sentiment-item negative">
+                                    <span>부정</span>
+                                    <strong>5%</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 딥러닝 기반 예측 분석 -->
+                <div class="result-card predictions">
+                    <h3>딥러닝 예측 분석
+                        <span class="help-icon" data-tooltip="딥러닝 모델이 예측한 키워드의 미래 트렌드입니다">
+                            <i class="fas fa-question-circle"></i>
+                        </span>
+                    </h3>
+                    <div class="prediction-metrics">
+                        <div class="metric-item growth">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="metric-label">예상 성장률</span>
+                            <strong>+45%</strong>
+                        </div>
+                        <div class="metric-item potential">
+                            <i class="fas fa-star"></i>
+                            <span class="metric-label">시장 잠재력</span>
+                            <strong>매우 높음</strong>
+                        </div>
+                        <div class="metric-item lifecycle">
+                            <i class="fas fa-clock"></i>
+                            <span class="metric-label">트렌드 수명주기</span>
+                            <strong>성장기</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 빅데이터 트렌드 분석 -->
+                <div class="result-card trends">
+                    <h3>빅데이터 트렌드 분석</h3>
+                    <div class="trend-chart">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                    <div class="trend-insights">
+                        <div class="insight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI 기반 예측</span>
+                        </div>
+                        <div class="insight-item">
+                            <i class="fas fa-database"></i>
+                            <span>실시간 데이터</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI 연관어 분석 -->
+                <div class="result-card related-keywords">
+                    <h3>AI 연관어 분석
+                        <span class="help-icon" data-tooltip="머신러닝이 분석한 핵심 연관 키워드입니다">
+                            <i class="fas fa-question-circle"></i>
+                        </span>
+                    </h3>
+                    <div class="keyword-cloud">
+                        <span class="keyword-tag high">머신러닝</span>
+                        <span class="keyword-tag high">딥러닝</span>
+                        <span class="keyword-tag medium">자연어처리</span>
+                        <span class="keyword-tag medium">빅데이터</span>
+                        <span class="keyword-tag medium">데이터마이닝</span>
+                        <span class="keyword-tag low">신경망</span>
+                        <span class="keyword-tag low">강화학습</span>
+                    </div>
+                    <div class="ai-insights">
+                        <div class="insight-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>AI 추천 인사이트</span>
+                            <p>현재 AI/ML 시장에서 가장 주목받는 키워드입니다</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
